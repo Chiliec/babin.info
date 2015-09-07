@@ -26,7 +26,16 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
 
+  <script type="text/javascript">
+    var site_url = 'https://babin.info';
+    var site_protocol = site_url.split("/")[0];
+    if (window.location.protocol !== site_protocol){
+      var url_without_protocol = window.location.href.substr(site_protocol.length);
+      window.location = site_protocol + url_without_protocol;
+    }
+  </script>
 </head>
+
 <body>
   <div id="container">
     <div id="wrap">
