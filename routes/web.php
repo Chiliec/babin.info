@@ -14,3 +14,5 @@
 Auth::routes(['register' => true]);
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::resource('posts', 'PostController');
