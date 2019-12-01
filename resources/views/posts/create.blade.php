@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@push('head')
+<script src="{{ asset('js/editor.js') }}" defer></script>
+<script src="{{ asset('js/headers.js') }}" defer></script>
+@endpush
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -13,8 +18,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
-                        Здесь будет текстовый редактор.
+                        <div id="codex-editor"></div>
                     </div>
                 </div>
             </div>
